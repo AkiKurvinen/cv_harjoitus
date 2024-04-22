@@ -1,0 +1,130 @@
+:root{
+    --primary-main: #02438d;
+    --primary-light: #1869c6;
+    --primary-contrastText: white;
+    --background: #dfdfdf;
+    --paper: white;
+    --text: #111;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+#container{
+    margin: 0 auto 2em auto;
+    max-width: 1000px;
+    display: flex;
+
+}
+/* left side */
+aside{
+    background-color: var(--primary-main);
+    color: var(--primary-contrastText);
+    min-width: 250px;
+    padding: 1em;
+}
+.center{
+    text-align: center;
+}
+#avatar{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+h1 span{
+    font-size: 16px;
+    font-weight: normal;
+}
+aside .contact{
+    list-style-type: none;
+    padding: 0;
+    line-height: 2em;
+}
+.contact li a{
+    color: var(--primary-contrastText);
+    text-decoration: none;
+}
+.contact li a:hover{
+    text-decoration: underline;
+}
+.skills{
+    list-style-type: none;
+    padding: 0;
+}
+.skills li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;    
+    position: relative;
+}
+.skills li:after{
+    content: '';
+    position: absolute;
+    background-color: var(--primary-light);
+    bottom: 0;
+    height: 5px;
+}
+.grade5:after{
+    width: 100%;
+}
+.grade4:after{
+    width: 80%;
+}
+.grade3:after{
+    width: 60%;
+}
+.grade2:after{
+    width: 40%;
+}
+.grade1:after{
+    width: 20%;
+}
+
+/*right side*/
+
+main{
+    width: 100%;
+    padding: 1em;
+    background-color: var(--paper);
+}
+
+main h2{
+    color: var(--primary-main);
+    border-bottom: solid thin var(--primary-main);
+}
+.wrapper{
+    display: flex;
+}
+.wrapper span:first-child{
+    flex-grow: 1;
+}
+.expitem{
+    margin-bottom: 2em;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+@media only screen and (max-width: 600px){
+
+    #container{
+        display: block;
+    }
+    .wrapper{
+        flex-direction: column;
+    }
+    .row{
+        display: block;
+    }
+
+}
